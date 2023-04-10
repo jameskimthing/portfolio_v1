@@ -8,8 +8,7 @@ const scroll: Writable<number> = writable(0);
 
 const screenUnitsPerSection: { [key in CurrentPart]?: { start: number; end: number } } = {
 	about: { start: 1, end: 3 },
-	projects: { start: 4, end: 12 },
-	contact: { start: 13, end: 16 }
+	projects: { start: 4, end: 12 }
 };
 
 let height: number;
@@ -28,7 +27,7 @@ function setCurrentPart(sc: number, he: number) {
 
 function moveToPart(section: CurrentPart) {
 	window.scrollTo({
-		top: screenUnitsPerSection[section]!['start'] * height,
+		top: section === 'contact' ? height * 13 : screenUnitsPerSection[section]!['start'] * height,
 		left: 0,
 		behavior: 'smooth'
 	});

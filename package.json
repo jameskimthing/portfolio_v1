@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@emailjs/browser": "^3.11.0",
 		"three": "^0.151.2"
 	}
 }
