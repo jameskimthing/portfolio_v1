@@ -12,7 +12,9 @@
 		on:pointerup={() => showProject.set('')}
 	>
 		<!-- style="transform: translate(-50%,-50%);" -->
-		<div class="lg:rounded-xl shadow-2xl flex flex-col bg-black border-2 border-amber-100 p-4">
+		<div
+			class="rounded lg:rounded-xl shadow-2xl flex flex-col bg-black border-2 border-amber-100 p-4"
+		>
 			<div class="text-xl md:text-5xl mb-1 lg:mb-5 text-center font-bold text-yellow">
 				{$showProject}
 			</div>
