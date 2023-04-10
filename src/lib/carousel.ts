@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { getRatioDoneOnScroll, scroll } from './screenUnits';
+import { showProject } from './projectPopup';
 
 const projects: { [name: string]: { link: string; description: string; github?: string } } = {
 	'aws-icons': {
@@ -75,7 +76,10 @@ function initializeCarousel(con: HTMLDivElement) {
 		scene.add(mesh);
 	}
 
-	let prevIntersect: THREE.Object3D;
+	let prevIntersect: THREE.Mesh;
+	const targetScale = new THREE.Vector3(1.2, 1.2, 1.2);
+	const originalScale = new THREE.Vector3(1, 1, 1);
+
 	function animate() {
 		if (!continueAnimation) return (continueAnimation = true);
 		requestAnimationFrame(animate);
@@ -85,16 +89,27 @@ function initializeCarousel(con: HTMLDivElement) {
 		const intersects = raycaster.intersectObjects(scene.children);
 		if (intersects.length > 0) {
 			container.style.cursor = 'pointer';
-			prevIntersect = intersects[0].object;
-			console.log(intersects.length);
-			prevIntersect.scale.set(1.2, 1.2, 1.2);
+
+			const intersect = intersects[0].object as THREE.Mesh;
+			if (intersect !== prevIntersect) {
+				if (prevIntersect) prevIntersect.scale.set(1, 1, 1);
+				prevIntersect = intersect;
+			}
+			prevIntersect.scale.lerp(targetScale, 0.1);
 
 			if (isClick) {
 				console.log('Click: ' + prevIntersect.userData.name);
+				showProject.set(prevIntersect.userData.name);
 				isClick = false;
 			}
 		} else {
-			if (prevIntersect) prevIntersect.scale.set(1, 1, 1);
+			if (prevIntersect) {
+				prevIntersect.scale.lerp(originalScale, 0.1);
+				if (prevIntersect.scale.distanceTo(originalScale) < 0.01) {
+					prevIntersect.scale.copy(originalScale);
+				}
+			}
+
 			container.style.cursor = 'default';
 			isClick = false;
 		}
@@ -156,4 +171,11 @@ function carouselClick(e: any) {
 	isClick = true;
 }
 
-export { initializeCarousel, carouselMouseMove, carouselClick, removeCarousel, carouselMouseLeave };
+export {
+	initializeCarousel,
+	carouselMouseMove,
+	carouselClick,
+	removeCarousel,
+	carouselMouseLeave,
+	projects
+};
