@@ -31,7 +31,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						href={projects[$showProject]['github'] ??
-							`https://jameskimthing.github.io/${$showProject}`}
+							`https://github.com/jameskimthing/${$showProject}`}
 					>
 						<ContactSvg contact="github" />
 					</a>
