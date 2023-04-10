@@ -12,7 +12,7 @@ const projects: { [name: string]: { link: string; description: string; github?: 
 		description: 'My tab container'
 	},
 	tables: {
-		link: 'https://james-tables.vercel.app/home',
+		link: 'https://james-tables.vercel.app',
 		description: 'tables'
 	},
 	'obsidian-aws': {

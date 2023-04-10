@@ -14,7 +14,7 @@
 
 <svelte:window bind:scrollY={scroll} />
 
-<div class="fixed bottom-0 left-10 z-40">
+<div class="fixed bottom-0 left-10 z-40 hidden md:block">
 	<InViewTransition delay={1000}>
 		<div class="flex flex-col text-bright-yellow items-center">
 			<a

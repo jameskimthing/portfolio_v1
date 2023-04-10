@@ -24,11 +24,16 @@
 	}
 </script>
 
-<section class="bg-black w-screen h-screen pl-32 flex flex-col justify-center">
+<section
+	class="bg-black w-screen h-screen items-center md:items-start md:pl-32 flex flex-col justify-center"
+>
 	<InViewTransition direction="vertical" delay={300}>
-		<div class="text-yellow text-5xl font-bold">Contact me</div>
+		<div class="text-yellow text-3xl md:text-5xl font-bold">Contact me</div>
 	</InViewTransition>
-	<form class="flex flex-col w-96 my-4 text-amber-100" on:submit|preventDefault={sendEmail}>
+	<form
+		class="flex flex-col w-80 md:w-96 lg:w-[500px] my-4 text-amber-100"
+		on:submit|preventDefault={sendEmail}
+	>
 		<InViewTransition direction="vertical" delay={400}>
 			<input
 				required
