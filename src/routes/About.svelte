@@ -18,9 +18,9 @@
 				<div class="text-3xl text-yellow font-bold text-center mb-3">My Skills</div>
 				<div class="text-slate-300 text-center">
 					I am a software developer who specializes in building web applications using SvelteKit,
-					TypeScript, and Tailwind CSS. I also have experience using Flutter for mobile app
-					development. I have experience with both Firebase and Supabase for building backends of
-					web and mobile applications.
+					TypeScript, and Tailwind CSS. Alongside this, I have experience using Flutter for mobile
+					app development, and both Firebase and Supabase for building the backends of web and
+					mobile applications.
 				</div>
 			</InViewTransition>
 			<InViewTransition delay={100}>

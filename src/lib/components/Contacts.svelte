@@ -17,9 +17,23 @@
 <div class="fixed bottom-0 left-10 z-40">
 	<InViewTransition delay={1000}>
 		<div class="flex flex-col text-bright-yellow items-center">
-			<ContactSvg contact="email" />
-			<ContactSvg contact="github" />
-			<ContactSvg contact="linkedin" />
+			<a
+				target="_blank"
+				rel="noopener noreferrer"
+				href="mailto:jameskimjaewon.abc@gmail.com?subject=Contact&body=Hello%20there!"
+			>
+				<ContactSvg contact="email" />
+			</a>
+			<a target="_blank" rel="noopener noreferrer" href="https://github.com/jameskimthing">
+				<ContactSvg contact="github" />
+			</a>
+			<a
+				target="_blank"
+				rel="noopener noreferrer"
+				href="https://www.linkedin.com/in/james-kim-282750252/"
+			>
+				<ContactSvg contact="linkedin" />
+			</a>
 			<div class="w-0.5 h-80 mt-4 bg-amber-100" />
 		</div>
 	</InViewTransition>

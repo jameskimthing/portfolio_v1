@@ -11,7 +11,7 @@
 	</InViewTransition>
 
 	<InViewTransition direction="vertical" delay={500}>
-		<div class="text-4xl md:text-7xl text-amber-100 font-bold w-fit">a frontend developer.</div>
+		<div class="text-4xl md:text-7xl text-amber-100 font-bold w-fit">a software developer.</div>
 	</InViewTransition>
 
 	<InViewTransition direction="vertical" delay={600}>

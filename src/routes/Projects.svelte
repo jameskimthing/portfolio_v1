@@ -18,7 +18,7 @@
 	<div class="fixed inset-0 grid place-items-center" transition:fly={{ x: -100, duration: 500 }}>
 		<div class="flex flex-col items-center">
 			<div class="text-yellow font-bold text-5xl mb-4">My Past Projects</div>
-			<InViewTransition>
+			<InViewTransition delay={100}>
 				<div
 					class="h-[700px] w-[1200px]"
 					bind:this={carousel}
