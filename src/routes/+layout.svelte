@@ -18,6 +18,10 @@
 	$: setCurrentPart(scroll, height);
 </script>
 
+<svelte:head>
+	<title>James's Portfolio</title>
+</svelte:head>
+
 <svelte:window on:resize={onResize} bind:scrollY={scroll} bind:innerHeight={height} />
 <div class="fixed" bind:this={container} />
 
