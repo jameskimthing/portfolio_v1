@@ -26,7 +26,7 @@
 			<InViewTransition delay={100}>
 				<div
 					bind:this={sphere}
-					class="rounded w-80 h-72 md:w-[600px] md:h-[450px] lg:w-[800px] lg:h-[500px] mx-auto"
+					class="rounded max-w-xs h-72 md:w-[600px] md:h-[450px] lg:w-[800px] lg:h-[500px] mx-auto"
 					on:mousemove={setMouseSphereLocation}
 				/>
 			</InViewTransition>
