@@ -2,7 +2,7 @@
 	import InViewTransition from '$lib/components/InViewTransition.svelte';
 </script>
 
-<div class="bg-black w-screen h-screen mt-4 px-8 md:pl-32 flex flex-col justify-center">
+<div class="bg-black w-screen h-screen px-8 md:pl-32 flex flex-col justify-center">
 	<InViewTransition direction="vertical" delay={300}>
 		<div class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white md:pb-3">Hello! I am</div>
 	</InViewTransition>
